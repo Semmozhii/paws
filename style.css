@@ -1,0 +1,149 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+#logbut button {
+  background-color:#E5AA70;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+ }
+ 
+#logbut button:hover {
+  background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
+  animation: slidernbw 5s linear infinite;
+  color: #000;
+ }
+ 
+ @keyframes slidernbw {
+  to {
+   background-position: 20vw;
+  }
+ }
+
+.nav-item a{
+  text-decoration: none;
+  color: purple;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 15px;
+  transition: all 0.4s;
+}
+.nav-item a:hover{
+  color:black;
+}
+.navbar-brand{
+  height: 50px;
+  width: 150px;
+}
+.navbar-toggler{
+  font-size: 30px;
+  color: black;
+}
+.navbar-toggler:focus{
+  outline: none;
+  box-shadow: none;
+}
+.top-banner{
+  background: url(https://wallpapers.com/images/featured/bulldog-aw887o5aqrxchml1.jpg)no-repeat;
+  background-size: cover;
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  background-position: top;
+  align-items: center;
+}
+#con1{
+  position:absolute;
+  left:25%;
+  top:210%;
+}
+#con2{
+   position:absolute;
+   left:50%;
+   top:210%;
+}
+.flip-card {
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+  font-family: sans-serif;
+  margin-left:10%;
+  position:absolute;
+  top: 50%; /* add vertical alignment */
+transform: translateY(-50%);
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid coral;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+     rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+  color: coral;
+}
+
+.flip-card-back {
+  background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+     bisque 40%, rgb(255, 185, 160) 78%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.content{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: bottom;
+  color:black;
+}
+.content h1{
+  font-size: 70px;
+  margin-top: 80px;
+}
+.content p{
+  margin: 20px auto;
+  font-weight: 100;
+}

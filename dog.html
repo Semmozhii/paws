@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loving Paws</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+ 
+</head>
+<style>
+  
+  
+    .sec{
+         padding: 10px 5%;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    }
+    .products .card{
+        width:310px;
+        box-shadow: 0 10px 20px black;
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+    .products .card img{
+        height: 250px;
+        width: 100%;
+    }
+    .products .card  img{
+        height: 250px;
+        width: 100%;
+    }
+    .products .card .title{
+        font-weight: 900;
+        font-size: 20px;
+        color: black;
+        padding: 0 20px;
+    }
+    .products .card .box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    .products .card .box .btn{
+        font-size: 13px;
+        color: green;
+        padding: 10px 18px;
+        font-weight: 900;
+        border: 1px solid green;
+        border-radius: 20px;
+    }
+    .products .card .box .btn:hover{
+        cursor: pointer;
+        background-color: green;
+        color: white;
+    }
+    .pheading{
+        text-align: center;
+        color:Green;
+    }
+   
+
+</style>
+<script>
+     $(document).ready(function(){
+      $("#search-item").on("keyup",function(){
+        var value=$(this).val().toLowerCase();
+        $("#card").filter(function(){
+            $(this).toggle($(this).text().toLowerCase().indexOf(value)> -1);
+        })
+      })
+     })     
+</script>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white  p-3 fixed-top ">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="pe2 (1).PNG" class="img-fluid" alt="">  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " href="index to paws.html">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " href="#Pets">Pets</a>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="index to paws.html"  aria-disabled="true">Contact</a>
+              </li>
+              
+              <form id="donate">
+                <button type="submit" formaction="pop.html" class="btn btn-success">Adopt</button>
+              </form>    &nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+        </div>
+      </nav>
+      </header><br><br><br><br><br>
+      <!--Save Animals-->
+      <h1 class="pheading" >Donate and Save Animals</h1>
+      <section class="sec">
+      <div class="products" id="product-list">
+        <div class="card" id="card">
+            <div class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Lagotto_romagnolo_322.jpg/800px-Lagotto_romagnolo_322.jpg" alt="" >
+            <div class="title">Breed:Lagotto Romangnolo</div>
+            <p>Height:16 to 19 inches</br>
+                Weight:24 to 35 pounds</br>
+                Life:15 to 17 years</p>
+            </p>
+           
+            </div>
+        </div>
+        <div class="card" id="card">
+            <div class="img"><img src="data:image/jpeg;base64,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" alt="" >
+            <div class="title">Breed:Sloughi</div>
+            <p>Height:24 to 29 inches</br>
+                Weight:35 to 50 pounds</br>
+                Life:10 to 15 years</p>
+            </p>
+            
+            </div>
+        </div>
+        <div class="card" id="card">
+            <div class="img"><img src="https://img2.storyblok.com/810x0/f/92981/730x455/f341cc1d17/kai-ken-primary.jpg" alt="" >
+            <div class="title">Breed:Kai Kens</div>
+            <p>Height:16 to 19.5 inches</br>
+                Weight:20 to 40 pounds</br>
+                Life:12 to 15 years</p>
+            </p>
+           
+            </div>
+        </div>
+        <div class="card" id="card">
+            <div class="img"><img src="data:image/jpeg;base64,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" alt="" >
+            <div class="title">Breed:English Foxhounds</div>
+            <p>Height:24 inches</br>
+                Weight:60 to 75 pounds</br>
+                Life:10 to 13 years</p>
+            </p>
+            
+            </div>
+        </div>
+        <div class="card" id="card">
+            <div class="img"><img src="https://images.ctfassets.net/440y9b545yd9/3pRA8hd6Wf1MbZQQRUAC8M/441f590202d2f2f8f9433d3f28a0ea2a/Australian_kelpie850.jpg" alt="" >
+            <div class="title">Breed:Australian Kelpie</div>
+            <p>Height:17 to 20 inches</br>
+                Weight:21 to 44 pounds</br>
+                Life:10 to 13 years</p>
+            </p>
+           
+            </div>
+        </div>
+        <div class="card" id="card">
+            <div class="img"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYWFRIVFRUSGRgSEhEYEhgYGBISERgSGBQZGhgYGBgcIS4lHB4rIRgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QGBISHjQhGCE0NDQxMTQ0NDExNDE0MTE0NDE0NDQ0NDQxMTE0NDU0NDQxNDQ0MTExMTQxMT80NDE0NP/AABEIALcBEwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAECBAUGBwj/xAA+EAABAwIDBQUFBQcEAwAAAAABAAIRAyEEEjEFE0FRYQYicYGRMqGx0fAUQlLB8QcVFiNisuFTcoKiM0Nj/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAgEQEBAQACAgMAAwAAAAAAAAAAARECEiExA0FREyJx/9oADAMBAAIRAxEAPwD1OVIOQ845pt4OaijSokoe9bzT5xzQElKVAPHNLOOaCcpwULOOafOOaCbimBUc45ps45oCJpUBUHNLMOaAmZKEPMOacPHNBNRe5OHjmszbePbSpVan+nTc6OZAsPVBynaHt2KNY06bWOyGKhM68QIXS7E2uzE021GeD28Wu5eHVeAV8Q573OJu5xJPUldb+z/bJoVwxx7lWGvvoT7LvI/FTGsezMCnZBbVHNIYhs6qIsBOSg79vNMaw5rSCKSDvm815n+0HtY4VW0KLyG0z/MLTE1OXgPmpix6kE8rE7MbVFbDUnuMuy5X88zbX8oPmtgVW81UqaUqG9bzUd63mgMCmcULet5p845oJhydpQi8c04qDmgNKdzbITag5qb6w5oBwkm3jeaSyrzM9pKscFAdpqvRZzBIUHUl6usc9rU/iKqOKIO0tXosksSATrDa2Gdqag1Cm/tVU5LEFMKRpyFOkTtWw3tY/kit7TvPAeq5eqyCnYCnSHaulf2kqdFXf2kq9FkhyWqvWHatYdpqvREHaepyWLkU2sTrDtWoe1NTkERnal/RYdamFWDFOkXa6h3aap0WF2m7QvfhqrTYPcxnqS4/2+9AJgLG7QE7mnyNapPiGMj4lZ5SSLxvliM0R8NXyuB5EEIVASCFB4IuuD0fT0R3aWqTY2hpHgWg/moHb1Yn2lhYWSym7myPNpj4EKw0rvxksee2ytj+IK/4kh2jr/iWWEKo6BK11ia3KvaaoynUqOdf2KY51CNfBov4kLz7EVS9znuMlxJJ6lXe0NUh7Kf+mwZh/wDR/ef5iQP+Ky89lw5Xy7cePh2HZ3bj6eHhh9mpB822/tK1Wdqqx4hcbsB/few/+xhj/c3vD4Eea2hQW+HmMc/Fbre0lY/eRGbfq/iWA1pCsU5XTrGNbDtv1uamztLVWVCkGBXrDa0n9pavRJnaip0Wa+mIVJzL2TrE7V0ze0lQ8Qkdv1eYXPMEIoenWG1tfv6rzCSxN6knXj+LtEp6JOcqza3BO99ldMWJlIBVqL0Z9RNMELksyDnUmOTUSbSkqT6cKTHJnulUBc1TYE7mWUc8ICBNmQTWlDfUU1cWXiVJtGyFRerQcmorOpysbtDkZSph0y6rULeUNawH1n/quja1YXaPA5303PeAxtPLTHEvJzPJ8yB/xWOfprh7c3TsQRcHRGqML4AiSQIA4lOGBocOAJy9V0vZnY7cu9rBxNQfyabQ5z3N/FlHDx6rhJr0W5EsPhf5DQ3LmpFxe2e+WOjvR0Iv4oDAu22JQoseIpU2PIMFzt/Xi890WaL9F0dXD4d7O/TpObp7LS6ehER5LrxuRx5Ty8se3iosgZqjhLaQBA4OqE90E8rT5LttobO2e1+VzHsMBxDXuygf1TMT0XI9qK9MNyYZrmskuIJLszoAkE3jgry5eE48a4bF1C573OJJc4knmTqkxtkR1O5njp49VFjbXMXjzXGx341Y2cctWm6R3XsJ8MwldpuxfoTHguFLwy/I+9dP2eqPOHp5rxmDSdd2DDfS48AF0+K5cc/ln2v1GqVMJ0weuriK1M5yCa6g+orq4suMpU6Kr0aiuMemoG+ndRdSVjLKm5llRR3aSt7tJZGc1oSe6yqveQhuxKzrSyx8G6M66yq9clToYkppjSNghNfBQjiAg1q4iyujXY8EIrSFz+GxZCuU8USk5JjYfoq9VlkqdYIWJq2srqINYh1TyQd/zUTiQs60t4eoJhW3PAXPVcQc1kb7USE0xpPxgWNt55exhBuyp7nD5tUKlUra7P02MmrVEk5dyy5zGZzkcALQVOXnwcfFXezHZfuNfiQCRdrCNB/XzPRbuIqkksp7tjY77izODH4jN/BA/eedr7ABgtldmbHIiAs1mKNSTMA91g0E8XHoPms5J6dNt9tfAYjNNNpaA0A1XtaxggmzQG2HHX5KtitruY59NjhkIAAbYstaPP8ANV8VigxgY1sNMGIMm3tOA1P6Kox7XmQQfxCCHDyN4VkEKzX5i8y7OIeOYiJHIoTsMHDpwWjUaW9Wu9x4KLBe41+KWEc7jdnRJAGl5uPHosN9MMGdzA7K7TW5/JdljxAkcPgsauAQRAAcROkTwXOx0n6xXVxUhu5DNO93r9I0XS9nnzSLbRTqPYw8C2zvcXFcziGEPDZF5FrGJXUYGs1tJzWgDI9gEc4dmJ66K8PbHO7GlkUH04CrjElPUqkhd9ckAxKobKtvSNVF2JCzoPTfBur7HhYGIr8lOhizEJpjo2VApOqBYtGvPFXGVgeK1qYu70JlXzhJNMVsQAqe4BXXnZDTwUf3M1c7yjXWuOr0QFXiF21TYjShDs+2U7RcrkWUyUR+GgLr/wByMjRQfsIFO0MriwyFFrzK653Zwc0Sl2faNU7QyuZpPdKthb52C1IbCHNO0TrXN1aIQRhV137jak3YbU7RetcVWpITxwC7epsBpTUuz7AnaGVxWGw0ubm9mZf/ALAJd7gUY7UNRzsrcoEBsObxb3YbqBA8LLsNobLaKVSBpTf4my5vYnZyaheeIlrYAcBP3iDr7PvT/CROix7oY2Q0f+Q8+i02Ui0ZyIaIawcI1cfh71t4fZoADREfe5Kltt7WtDQbCwRpy+1MS5z3SdRYybaf59UPCZxAa6SBYSJHhxVauwvcdLWF4vz8AshtJ7HucWBzjHeIeW/8XN0I0WdWR3WA2qHSyo2DbofEdVo7vgYngefVcLh8Y+W7wQQe6TIcR1BFl1GExmdg1tI5myvbwmLm7mxg3g8Vzu29nmmcwux0weR4grpqFQnrYHTqm2o0ZDIls3kkx+axWo86a8Pe1jgTezuI6rpNn0hl6Pe9/jJge4BYtNga6ofwhwHmY+BXfYTY4NKkeO6p+uQK8b52s8p4ZraTUiwLWp7IRTskLr24uXWuaxNIKl9mBXVVNjgpmbBCzeUanGuSr0IVeIXa1tgAqt/DolNi5XJMe5Ep4ggrsmbAZGiF/DbJmFOxjm/taS6H+HW8kk7GOoyJQjpLDYMJoR0kAIShGShAGE2VHhKEAISsjZUxYEAZSRsgTimFkBhIkI5oJhhZTaM/Hy5j2NBLnAhoFySVHCYfcsuW53gZyXCG9BdPtHGNpyxkF33jrH9IWDXx5jhfyXfjLJ5YvmtDFYkiwjr1WZiKZPtaHgQSJRMJiSZvPIWPuRyHOmfI/JRpzbsKA4/Xog1KY/FHhYrexVAa8efzWHj8OQbaH0UXWfXa2RcuMre2Mw5XTzlY1KnBv1W7gIaB1AnqsjYwbOZjW4taQrmMwuZhbrZZgxQGXLMO46DkZvcLVw1WcotxmFmjzzE4b+bux994nhDefx9F6jgKoqUWPAjJDHeAENP5LgsWwfaKzjwDQPMrquxmKz56TjZwIHkBF04/i8v1qSnCK7Z56pv3eeZVTwHCkpjAHmU/2J3NECSyoowjkjhyEUHKllU3sKixhQRyp0XImU0GyJ8qubtLdq4mqWRLIru7S3aYap5UsqubtLdphqnlSyq5u0t2mGqeVLKrm7T7tMNUwxTaxWDTUS1SiELB7T7ZZh2BrnhrqnH72TS3j810WVeYftTpsNWmDIIpCSL93O6LK8fF1KejtWk4wHxxk8fVTxeJaAJi9mkcSdF5y8z3ZIFoPHzV7B1XCGueC1vJ8+nJdf5bfFTq6vDYl2YEZSJ4ToOvktpuNA043E2jmCuTwZILSNAR1kcvBa7Htc4Txm2h6+KzrSe0NoQI/EoUHZmGTdpBCobSYQZmzbTzv+iqMxb2mwF4nl0U0aeIw5EctbaBRfiu7DSSR5jqqFfFkiCbnyQsMxwJJGvO0ys6rZwrhlE8CZ6X+C6PAVu8Ogk6ToPVcjh334RPnZblOuQx5GpECeay0pbVqAPJ41MpN+DZv7wr/YyrFbWCZt4e5c7j6+Z7iNG91v8AtbafiVsdk2y8On2Tw1Se1vp6m4TfmkGlRwzpaOnyRSVtzMGpiEs06Aqu+o0auCYJvKgQo75vMo7MhtJHpCvWpoOVNkCvfY59lwPuQH4V44el1MWUDIElPIUygsSkg5k+dUFToWdLOgKkh5ksyAiSHmT5kE0lDMlmQOVCFLMmBWcDiy8u/adSmqx4Fn0wJ5kOM+Wi9RXG/tG2Y+rQa9jS51JxkAS7dkXIHiB9BX6T7eO7u8T+qs0GRHCFI7Lr7vf7t+7zlmaO7mDQb8QL66WN0Bj41t5qa6Y2sJVBsSBHpK06FUAXccoAm0ZpNodwKw8O8Ed0t8/rotKjSLgQX2IiNBHValZrbY0OZfi0GSOkmyqvoNsBBJAkaCYsob4Na8TAMDnEQsevtHvd32W6CLuPMnknKyEjRZQbMlzQeI1ICr13tcTBsHQOvX81nMLnEmSJ15lHZTIGqzq40cM4NOg+ak/HzMGzSQ3q8j4ASsp9QusDDR7Tv6fknZUBiLBtmj4nxKixYdp5LY7MPh9uPgsR7vGT6cfmuj7OYYazeNba20SLXpGznkggdFYxOKawcz7gs7CGAOBJInlaJVavhKl5ZPODmPpyXTi5X2fEY9zrSQOlgqm95FXMNspzpkECLTf0WhhdmtZdwknnotHhkU850WlhsL+KfeFcyMboBflp6KLqg4ImrlHuiJUhWWccR1TirKDR3ySz94khhoTQp5gmzLlrSKSfMmLgmhSlKbMlKaHlPKjKeU0PKWZMkmh8ycOUEpTQYOSIlCzJ8yaYcsQm0gNAB4ABEzqGdXUxwf7SdjNyNxLGgOa7LVIEZmn2XOjUg2nqvN27Re0i119BYikx7HMe0Oa8EOB0IXnXa3szh8O2mabDFRzw8uc55kAEQTpoVLPtqX6efO2g4mTfx/Ja+znseAOKr4rZzATAPqqdA5HSCRz5KVqN6phsmuh09FXqvkawBqbAeqsvxjXMh7h3RPMnw5rJqVS+0Q2dOM8ymhqtbN3WyGA+bjzPyR6QTNoQNNfipM/JQWKTSSCeY/NdfsJtgecaeC5nCsn1H0V2Ozoa1six0jgY/wALUHS4Z9vO/qt/DgHKeIFjxjksDDERHh6rawzrCOXvWuNY5LwA4qL2dEzHyI+iFFz4sfoLo5qtdipvMeSv1X8VWrEO6deqVWc6oPrmpNeqOOlpcDzQ6eI6/ksNY1d4Elm/ahzSU0xpbxLP1VYPTF68fauvVZzlLeKsHpnPTtTqtB6ReVWL0hUTtTqs7wpbwqvnSFRO9OqzvE29Kr5k+dO9Oo5qlNvSg7xKVe9OopqFLelCDkt4p2q9RN6UVtcQgB8obnp2sTqsuqQsLtlh8+GzcadRjx4TlP8ActTeWVTajs1Go3m0x46/kt8eXK8pC8ZJrzbFMn/t6LGq010uPoZHaWJc4eDr/P0WLiKdz5e9d7EUm0QrNNlx1Saz3fBHY0enwUBMndGiCCJ+vqFcYJ4cVH7LdkcXAa8zH1dBb2fS7wmY9YXU05DWk6AyNeXD1WRhKY+E6ytinTJbxkaeCDewNSRPhI+S2MPUiI4rmMDUgET8LLZoVYa0iNYPLT5rUYsbG84jx+aI52YSP0KompISwdf7p4rpKyk+pqD9BAc9TxQMnp8FXB16IAYyjmb6x8lzDsVBIiOC6tzvQ+4rndr4WHF3B3xWeTXFRdjElm1G3KZY1vHZl6fOgZksy8TqLvEnPQC5LMgPnUc6DmSzILBek16rh6WZBYdVKm2oquZSDkFneKW8VXMnzqg4qJGogZ02ZAfeIbqigXIL3KEENYypVfYg/fLo9CPmgAJbSdlaAD7AHrB+a7fBP7ax8nrHNbapyxp/DY+GvzXPVhr4hdHiagcT/U288CNFg16V4HUdY/Rd+TEUmnRGY2Y+ihOCMwx5KKt0R66+RRGPg+BCAHjX4a6KM3uT0QbGFeDe2vktzDVAQb6C3j9Ark6OIIgf54rYwFfxv+f6q6Ntj+A1nh11K6DB05YQenhx+a5zDgyNbfNdDs58COn1CsZozXxAv5qDH94jr4KVbx4/Xgq8w4xzBjpET7lqMth3ebPEfBZ9W1+UyrVJ9h6IGJsZ4GxV1FJz4MeEIOLGZj2nXLLfEC35psQeHLwlAdXsD0gpVjks5SR9weSS5OrpyVCUkl43VElRJSSRTSlmSSQNmSzJJIHzKQckkgcOTlySSBFyiXJJIGL1DOUkkBcNdzQdJE+CDtMyHGbcU6S9Pw+q5fJ7jl8c+DI6/EwqOLbIDuZvzmCkkulZjMeDJCm2SmSUUVgi3UfXuTvfx6XSSUoag8k28Vv4FwGuunkkkrEa1CsRH0VtYOvAGv6FJJaKumoT4wfBQab2jQJJLUc6tUXWI5X96eu6WkeaSSVWRiXSPd1Wa6pDKmndNvOySSlWMjfpJJKNv//Z" alt="" >
+            <div class="title">Thai Ridgeback</div>
+            <p>Height:20 to 24 inches</br>
+                Weight:35 to 75 pounds</br>
+                Life:12 to 13 years</p>
+            </p>
+            
+            </div>
+        </div>
+        <div class="card" id="card">
+            <div class="img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Berger-des-Pyrenees_Adeux_0302x0214.jpg/220px-Berger-des-Pyrenees_Adeux_0302x0214.jpg" alt="" >
+            <div class="title">Breed:Pyrenean shepherd</div>
+            <p>Height:15 to 18.5(rough-faced),
+               15.5 to 21(smooth-faced)
+            </br>
+                Weight:15 to 30 pounds</br>
+                Life:17 to 19 years</p>
+            </p>
+           
+            </div>
+        </div>
+        <div class="card" id="card">
+            <div class="img"><img src="https://www.dogster.com/wp-content/uploads/2019/11/Cesky-Terrier_AlamyERK49X.png" alt="" >
+            <div class="title">Breed:Cesky terrier</div>
+            <p>Height:10 to 13 inches</br>
+                Weight:14 to 24 pounds</br>
+                Life:13 to 15 years</p>
+            </p>
+            
+            </div>
+        </div>
+      </div>
+      
+
+</section>
+<section class="new" id="Pets">
+    <div class="container py-5">
+      <div class="row pt-5">
+        <div class="col-lg-7 m-auto">
+          <div class="row text-center">
+           
+            <div class="col-lg-5">
+              <a href="bird.html"><img src="https://cdn-icons-png.flaticon.com/512/194/194619.png" class="img-luid" alt=""  style="width:150px;height:150px"></a>
+              <h6>Birds</h6>
+            </div>
+            <div class="col-lg-7">
+              <a href="cat.html"><img src="https://cdn-icons-png.flaticon.com/512/374/374980.png" class="img-luid" alt=""  style="width:155px;height:150px"></a>
+              <h6>Cats</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
